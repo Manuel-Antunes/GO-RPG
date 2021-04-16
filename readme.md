@@ -1,6 +1,6 @@
 # GO RPG
 
-## Gopher as a new Dungeon Master
+## Gopher as your new Dungeon Master
 
 ![](./assets/dmgo.jpg)
 
