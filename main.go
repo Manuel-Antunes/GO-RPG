@@ -24,9 +24,12 @@ func dashboard(c echo.Context) error {
 func main() {
 	e := echo.New()
 	e.GET("/", dashboard)
+	//this object is used to store the Template engine object reference
 	t := &Template{
 		templates: template.Must(template.ParseGlob("src/views/*.html")),
 	}
+	//here we setup the static files system
+	e.Static("/public", "src/public")
 	e.Renderer = t
 	e.Logger.Print("Listening on port 8080")
 	e.Logger.Fatal(e.Start(":8080"))
