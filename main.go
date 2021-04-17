@@ -1,15 +1,18 @@
 package main
 
 import (
-	"html/template"
-	"os"
+	"net/http"
+
+	"github.com/labstack/echo"
 )
 
+func dashboard(c echo.Context) error {
+	return c.String(http.StatusOK, "Dashboard")
+}
+
 func main() {
-	tmpString := "Hello, {{.}}"
-	tmpl := template.Must(template.New("tela").Parse(tmpString))
-	err := tmpl.Execute(os.Stdout, "sla")
-	if err != nil {
-		panic("deu ruim")
-	}
+	e := echo.New()
+	e.GET("/", dashboard)
+	e.Logger.Print("Listening on port 8080")
+	e.Logger.Fatal(e.Start(":8080"))
 }
