@@ -1,10 +1,15 @@
 package main
 
-import "net/http"
+import (
+	"html/template"
+	"os"
+)
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("hello world"))
-	})
-	http.ListenAndServe(":8080", nil)
+	tmpString := "Hello, {{.}}"
+	tmpl := template.Must(template.New("tela").Parse(tmpString))
+	err := tmpl.Execute(os.Stdout, "sla")
+	if err != nil {
+		panic("deu ruim")
+	}
 }
