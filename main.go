@@ -8,15 +8,24 @@ import (
 	"github.com/labstack/echo"
 )
 
+type pessoa struct {
+	Nome  string
+	Idade int
+}
+
 func dashboard(c echo.Context) error {
-	return c.String(http.StatusOK, "Dashboard")
+	jorge := pessoa{
+		Nome:  "jorge",
+		Idade: 10,
+	}
+	return c.Render(http.StatusOK, "index", jorge)
 }
 
 func main() {
 	e := echo.New()
 	e.GET("/", dashboard)
 	t := &Template{
-		templates: template.Must(template.ParseGlob("views/*.html")),
+		templates: template.Must(template.ParseGlob("src/views/*.html")),
 	}
 	e.Renderer = t
 	e.Logger.Print("Listening on port 8080")
