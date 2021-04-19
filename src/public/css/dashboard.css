@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    font-size: 5rem;
+    width: 80%;
+    color: #FFF;
+    margin-top: 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container p {
+    font-size: 2.5rem;
+}

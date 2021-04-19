@@ -1,0 +1,55 @@
+{{define "sign-up"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/sign-up.css">
+    <link rel="stylesheet" href="public/css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="whrapper">
+        <div class="container">
+            <div class="splash">
+            </div>
+            <div class="bash">
+                <form enctype="multipart/form-data" id="formulario" action="/users" method="post">
+                    <h1>SignUp</h1>
+                    <link rel="stylesheet" href="/public/css/signUp.css">
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input placeholder="insira o seu nome" id="name" name="name" type="text">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input placeholder="insira o seu email" id="email" name="email" type="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input placeholder="insira sua senha" id="password" name="password" type="password">
+                    </div>
+                    <p>
+                        volte para a luz jovem <a href="/">clique aqui</a> e gopher irá lhe guiar
+                    </p>
+                    <div class="buttons">
+                        <button id="about">
+                  <icon class="material-icons">error</icon>
+                  sobre
+                </button>
+                        <button id="google-button"><i class="fab fa-google"></i>Login Com o Google</button>
+                        <button id="create-user" type="submit">Cadastrar <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+{{end}}
