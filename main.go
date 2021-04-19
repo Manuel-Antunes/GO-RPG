@@ -8,29 +8,18 @@ import (
 	"github.com/labstack/echo"
 )
 
-type pessoa struct {
-	Nome  string
-	Idade int
-}
-
 func dashboard(c echo.Context) error {
-	jorge := pessoa{
-		Nome:  "jorge",
-		Idade: 10,
-	}
-	return c.Render(http.StatusOK, "index", jorge)
+	return c.Render(http.StatusOK, "index", nil)
 }
 
 func main() {
 	e := echo.New()
 	e.GET("/", dashboard)
-	//this object is used to store the Template engine object reference
-	t := &Template{
-		templates: template.Must(template.ParseGlob("src/views/*.html")),
-	}
 	//here we setup the static files system
 	e.Static("/public", "src/public")
-	e.Renderer = t
+	e.Renderer = &Template{
+		templates: template.Must(template.ParseGlob("src/views/*.html")),
+	}
 	e.Logger.Print("Listening on port 8080")
 	e.Logger.Fatal(e.Start(":8080"))
 }
