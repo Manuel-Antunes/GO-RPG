@@ -8,6 +8,11 @@ import (
 	"github.com/labstack/echo"
 )
 
+func create_user(c echo.Context) error {
+
+	return c.String(http.StatusOK, "oi")
+}
+
 func dashboard(c echo.Context) error {
 	return c.Render(http.StatusOK, "index", nil)
 }
@@ -18,6 +23,7 @@ func sign_up(c echo.Context) error {
 func main() {
 	e := echo.New()
 	e.GET("/", dashboard)
+	e.POST("/users", create_user)
 	e.GET("/sign-up", sign_up)
 	//here we setup the static files system
 	e.Static("/public", "src/public")
