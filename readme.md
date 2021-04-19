@@ -2,7 +2,7 @@
 
 ## Gopher as your new Dungeon Master
 
-![](./assets/dmgo.jpg)
+![](./src/assets/dmgo.jpg)
 
 
 ## Some Features
