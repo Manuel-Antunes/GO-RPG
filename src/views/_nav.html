@@ -1,0 +1,39 @@
+{{define "_nav"}}
+<link rel="stylesheet" href="/public/css/_nav.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+
+<div class="nav">
+    <div id="logo">
+        <img src="public/img/gophermagician.png" alt="gophermagician">
+        <a href="/">GO RPG</a>
+    </div>
+
+    <div id="clickToOpenMenu" class="profile">
+        <span class="fb-username">...</span>
+        <img class="photo-avatar" src="http://www.darylroththeatre.com/wp-content/uploads/2018/10/avatar-placeholder.png" alt="">
+        <div class="sub-menu">
+            <ul>
+                <li>
+                    <a href="/user">
+                        <img class="photo-avatar" src="http://www.darylroththeatre.com/wp-content/uploads/2018/10/avatar-placeholder.png" alt="">
+                        <div class="email-dm">
+                            <div class="fb-username">...</div>
+                            <div class="fb-email">...</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/create-plantation">
+                        <i class="fas fa-cannabis"></i>Cadastrar plantação</a>
+                </li>
+                <li>
+                    <a href="/logout">
+                        <i class="material-icons">exit_to_app</i>Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- <script src="/public/js/nav.js"></script> -->
+{{end}}

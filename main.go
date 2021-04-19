@@ -14,10 +14,10 @@ func create_user(c echo.Context) error {
 	if error == nil {
 		fmt.Println(form)
 	}
-	return c.String(http.StatusOK, "oi")
+	return c.Render(http.StatusOK, "dashboard", form)
 }
 
-func dashboard(c echo.Context) error {
+func index(c echo.Context) error {
 	return c.Render(http.StatusOK, "index", nil)
 }
 func sign_up(c echo.Context) error {
@@ -26,7 +26,7 @@ func sign_up(c echo.Context) error {
 
 func main() {
 	e := echo.New()
-	e.GET("/", dashboard)
+	e.GET("/", index)
 	e.POST("/users", create_user)
 	e.GET("/sign-up", sign_up)
 	//here we setup the static files system
