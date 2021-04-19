@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"text/template"
@@ -9,7 +10,10 @@ import (
 )
 
 func create_user(c echo.Context) error {
-
+	form, error := c.MultipartForm()
+	if error == nil {
+		fmt.Println(form)
+	}
 	return c.String(http.StatusOK, "oi")
 }
 
