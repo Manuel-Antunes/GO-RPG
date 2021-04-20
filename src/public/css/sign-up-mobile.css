@@ -1,19 +1,15 @@
 .container {
     display: flex;
-    height: 90%;
-    width: 90%;
-    flex-wrap: wrap;
-    border-radius: 5px;
+    flex-direction: column;
     box-shadow: 0px 3px 1px -2px rgba(255, 255, 255, 0.2), 0px 2px 2px 0px rgba(255, 255, 255, 0.14), 0px 1px 5px 0px rgba(255, 255, 255, 0.12);
-    background-color: #FFF;
+    width: 100%;
+    height: 100%;
 }
 
 .splash {
-    height: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    width: 40rem;
+    width: 100%;
     display: flex;
+    height: 50rem;
     align-items: center;
     justify-content: center;
     font-family: 'Lato', 'Helvetica Neue', sans-serif;
@@ -21,6 +17,57 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.form-control label {
+    font-family: 'Roboto' sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    padding: 1rem 0;
+}
+
+.buttons>* {
+    margin: 1rem;
+}
+
+.form-control {
+    color: #FFF;
+    font-size: 3rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+}
+
+.form-control input {
+    padding: 1.5rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    border: none;
+}
+
+#about icon {
+    margin-right: 10px;
+}
+
+.bash {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
@@ -39,6 +86,7 @@ button {
     outline: 0;
     padding: .9vh 1.3vw;
     align-items: center;
+    justify-content: center;
 }
 
 #google-button i {
@@ -47,61 +95,8 @@ button {
     margin-right: 10px;
 }
 
-#create-user i {
-    line-height: 1.75;
-    font-size: 1.5rem;
-    margin-left: 10px;
-}
-
 button:hover {
     background-color: rgb(41, 15, 114);
-}
-
-.form-control label {
-    font-family: 'Roboto' sans-serif;
-    color: #191920;
-}
-
-form {
-    width: 70%;
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-    flex-wrap: wrap;
-}
-
-.buttons>* {
-    margin: 1rem 0px;
-}
-
-.form-control {
-    color: #FFF;
-    font-size: 3rem;
-    display: flex;
-    flex-direction: column;
-    font-family: "Lato", sans-serif;
-}
-
-.form-control input {
-    padding: 1.5rem;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.089);
-    border-radius: 2px;
-    border: none;
-}
-
-#about icon {
-    margin-right: 10px;
-}
-
-.bash {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .whrapper {
@@ -112,16 +107,24 @@ form {
     justify-content: center;
 }
 
+h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
 form h1 {
-    margin: 3rem 0;
-    font-size: 8.75rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 1rem 0;
+    font-size: 3.75rem;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-weight: 300;
-    color: #191920;
+    color: #FFF;
 }
 
 form p {
     margin-top: 3%;
+    color: #fff;
     font-size: 1.5rem;
 }
 
