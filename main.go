@@ -3,7 +3,6 @@ package main
 import (
 	"io"
 	"net/http"
-	"os"
 	"text/template"
 
 	"github.com/labstack/echo"
@@ -38,7 +37,7 @@ func main() {
 		templates: template.Must(template.ParseGlob("src/views/*.html")),
 	}
 	e.Logger.Print("Listening on port 8080")
-	e.Logger.Fatal(e.Start(os.Getenv("PORT")))
+	e.Logger.Fatal(e.Start(":8080"))
 }
 
 // this type is an existing template to serve html/templates into echo
